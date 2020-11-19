@@ -6,6 +6,7 @@ import com.charlesgadeken.entwined.interaction.Triggerable;
 import com.charlesgadeken.entwined.model.Model;
 import heronarts.lx.LX;
 import heronarts.lx.mixer.LXChannel;
+import heronarts.lx.parameter.CompoundParameter;
 import heronarts.lx.parameter.LXParameter;
 import heronarts.lx.parameter.LXParameterListener;
 import heronarts.lx.pattern.LXPattern;
@@ -34,8 +35,8 @@ abstract class TSPattern extends LXPattern {
         return parameterTriggerableAdapter;
     }
 
-    BasicParameter getChannelFade() {
-        return getFaderTransition(getChannel()).fade;
+    CompoundParameter getChannelFade() {
+        return getFaderTransition(getChannel()).get;
     }
 
     ParameterTriggerableAdapter getParameterTriggerableAdapter() {

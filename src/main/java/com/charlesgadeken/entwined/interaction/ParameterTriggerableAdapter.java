@@ -19,7 +19,7 @@ public class ParameterTriggerableAdapter implements Triggerable, LXLoopTask {
     private final double offValue;
     private final double onValue;
 
-    ParameterTriggerableAdapter(LX lx, LXNormalizedParameter enabledParameter) {
+    public ParameterTriggerableAdapter(LX lx, LXNormalizedParameter enabledParameter) {
         this(lx, enabledParameter, 0, 1);
     }
 
