@@ -1,5 +1,6 @@
 package com.charlesgadeken.entwined.model;
 
+import com.charlesgadeken.entwined.Funcs;
 import com.charlesgadeken.entwined.model.config.ShrubCubeConfig;
 import heronarts.lx.LX;
 import heronarts.lx.model.LXPoint;
@@ -55,7 +56,7 @@ public class Shrub extends LXModelInterceptor {
     }
 
     public Vec3D transformPoint(Vec3D point) {
-        return ((Fixture) this.lx.structure.fixtures.get(0)).transformPoint(point);
+        return this.getFixture().transformPoint(point);
     }
 
     protected static class Fixture extends PseudoAbstractFixture {
@@ -73,11 +74,10 @@ public class Shrub extends LXModelInterceptor {
                 float x,
                 float z,
                 float ry) {
-            super(lx, "Shrub");
             this.lx = lx;
             shrubTransform = new LXTransform();
             shrubTransform.translate(x, 0, z);
-            shrubTransform.rotateY(ry * com.charlesgadeken.entwined.Utils.PI / 180);
+            shrubTransform.rotateY(ry * Funcs.PI / 180);
             for (int i = 0; i < NUM_CLUSTERS_IN_SHRUB; i++) {
                 shrubClusters.add(new EntwinedCluster(i));
             }

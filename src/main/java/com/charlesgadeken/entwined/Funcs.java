@@ -2,7 +2,7 @@ package com.charlesgadeken.entwined;
 
 import java.util.Random;
 
-public class Utils {
+public class Funcs {
     public static float PI = (float) Math.PI;
     public static final float HALF_PI = (float) (Math.PI / 2.0);
     public static final float THIRD_PI = (float) (Math.PI / 3.0);

@@ -98,7 +98,6 @@ public class Model extends LXModelInterceptor {
                 List<CubeConfig> cubeConfigs,
                 List<ShrubConfig> shrubConfigs,
                 List<ShrubCubeConfig> shrubCubeConfigs) {
-            super(lx, "TheInstallation");
             for (int i = 0; i < treeConfigs.size(); i++) {
 
                 TreeConfig tc = treeConfigs.get(i);

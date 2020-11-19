@@ -1,5 +1,6 @@
 package com.charlesgadeken.entwined.model;
 
+import com.charlesgadeken.entwined.Funcs;
 import heronarts.lx.model.LXModel;
 import heronarts.lx.model.LXPoint;
 import java.awt.geom.Point2D;
@@ -74,12 +75,7 @@ public class BaseCube extends LXModel {
         this.sy = sculpturePosition.y;
         this.sz = sculpturePosition.z;
         this.r = (float) Point2D.distance(sculpturePosition.x, sculpturePosition.z, 0, 0);
-        this.theta =
-                180
-                        + 180
-                                / com.charlesgadeken.entwined.Utils.PI
-                                * com.charlesgadeken.entwined.Utils.atan2(
-                                        sculpturePosition.z, sculpturePosition.x);
+        this.theta = 180 + 180 / Funcs.PI * Funcs.atan2(sculpturePosition.z, sculpturePosition.x);
     }
 
     void resetTransform() {
